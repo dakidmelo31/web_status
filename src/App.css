@@ -242,6 +242,11 @@ div.right-control:focus
   height:110px;
   z-index: 1500;
 }
+.replyForm{
+  position: fixed;
+  bottom: 0;
+  z-index: 2600;
+}
 .swipeUp{
   position: fixed;
   bottom: 150px;

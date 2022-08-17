@@ -24,6 +24,28 @@ const leftSwitch = ()=>{
   alert("move to left");
 }
 
+let replyOpened = false;
+const openReply = (valu) =>{
+  alert("clicked")
+//   replyOpened = !replyOpened;
+// if(replyOpened){
+//   anime({
+//     targets: ".replyForm",
+//     translateY: -200,
+//     duration: 2000,
+//   })
+// }
+// else{
+//   anime({
+//     targets: ".replyForm",
+//     translateY: 0,
+//     duration: 2000,
+//   })
+  
+// }
+
+}
+
 
 
 // const [statusData, updateData] = useState();
@@ -97,13 +119,6 @@ const openStatus = (event,number)=>{
   //   translateX: 250
   // });
   };
-  anime({
-    targets: ".swipeUp",
-    translateY: 50,
-  delay: function(el, i) { return i * 100; },
-  direction: 'alternate',
-  loop: true,
-  easing: 'easeInOutSine' })
 
   const list = [
     image1,
@@ -125,6 +140,13 @@ const count = [ image1, image2, image3];
   const handleSwipe = (details) =>{
     alert(details);
   }
+  anime({
+    targets: ".swipeUp",
+    translateY: 50,
+  delay: function(el, i) { return i * 100; },
+  direction: 'alternate',
+  loop: true,
+  easing: 'easeInOutSine' })
 function App() {
 
     
@@ -134,6 +156,10 @@ function App() {
 
 
 <div className="status-jumbotron" >
+
+  <div className="replyForm">
+    <input className="replyInput" type="text" />
+  </div>
   
 <div className="mainStatuses">
 {count.map((e, index)=>{
@@ -151,9 +177,9 @@ function App() {
   return <div className="status-thumbs"></div>
 })}</div>
 
-<div className="swipeUp">
-  <i className="fas fa-chevron-up"></i>
-  <span>Reply</span>
+<div className="swipeUp" onClick={openReply}>
+  <i className="fas fa-chevron-up"onClick={openReply}></i>
+  <span onClick={openReply}>Reply</span>
 </div>
   <div className="controls">
     <div className="left-control" onClick={leftSwitch}></div>
