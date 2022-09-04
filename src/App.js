@@ -109,6 +109,7 @@ const toggleMenu =(event, val)=>{
     });
   }
 }
+var another = "another change to code";
 var currentIndex = 0;
 const openStatus = (event,number)=>{
   event.preventDefault();

@@ -242,6 +242,9 @@ div.right-control:focus
   height:110px;
   z-index: 1500;
 }
+a{
+  font-family: 'Courier New', Courier, monospace;
+}
 .replyForm{
   position: fixed;
   bottom: 0;
